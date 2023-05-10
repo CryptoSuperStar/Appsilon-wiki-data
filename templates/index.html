@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie List</title>
+  </head>
+  <body>
+    <h1>Movie List</h1>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Label</th>
+        <th>Release Date</th>
+        <th>Imdb_ID</th>
+        <th>Movie</th>
+      </tr>
+      {% for movie in movies %}
+      <tr>
+        <td style="text-align:center;">{{ movie.id }}</td>
+        <td style="text-align:center;" >{{ movie.movieLabel }}</td>
+        <td style="text-align:center;">{{ movie.release_date }}</td>
+        <td style="text-align:center;">{{ movie.imdb_id }}</td>
+        <td style="text-align:center;">{{ movie.movie }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
